@@ -295,7 +295,7 @@ if __name__=='__main__':
 
 # OpanAI en
 # import openai
-# openai.api_key = "sk-proj-CsM3ltN9MnXZrDsdKANJT3BlbkFJW3x3aPqaG4yopp7Toqy5"
+# openai.api_key = "xxx"
 # model = 'text-embedding-3-large'
 # embedding_path = '/cognitive_comp/zhuliang/data/Mem-bench/en/openai.json'
 #
@@ -355,7 +355,7 @@ if __name__=='__main__':
 
 # OpenAI zh
 # import openai
-# openai.api_key = "sk-proj-OaAH3F4imVa6O9wgEoiMT3BlbkFJ5TWIALPqAxKCPZFg3ROD"
+# openai.api_key = "xxx"
 # model = 'text-embedding-3-large'
 # embedding_path = 'output/embedding_top20_zh/openai.json'
 
