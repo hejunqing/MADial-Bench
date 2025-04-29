@@ -135,106 +135,12 @@ if __name__=='__main__':
 
     main('.')
             
-            
-
-
-
-
-# # Jina zh
-# model_path = '/cognitive_comp/hejunqing/projects/pretrained_models/jina-embeddings-v2-base-zh'
-# model = AutoModel.from_pretrained(model_path, trust_remote_code=True)
-# embedding_path = '/cognitive_comp/zhuliang/data/Mem-bench/jina.json'
-# emb_list = []
-# for s in summary:
-#     emb_list.append(model.encode(str(s), normalize_embeddings=True).tolist())
-# with open(embedding_path, 'a+', encoding='utf-8') as file:
-#     json.dump({
-#         "summary": emb_list,
-#         "ids": id_list
-#     }, file, ensure_ascii=False)
-#     file.write('\n')
-# print('Done.')
-#
-# # Acge zh
-# model_path = '/cognitive_comp/hejunqing/projects/pretrained_models/acge_text_embedding'
-# model = SentenceTransformer(model_path)
-# embedding_path = '/cognitive_comp/zhuliang/data/Mem-bench/acge.json'
-# emb_list = []
-# for s in summary:
-#     emb_list.append(model.encode(str(s), normalize_embeddings=True).tolist())
-# with open(embedding_path, 'a+', encoding='utf-8') as file:
-#     json.dump({
-#         "summary": emb_list,
-#         "ids": id_list
-#     }, file, ensure_ascii=False)
-#     file.write('\n')
-# print('Done.')
-#
-# # Stella zh
-# model_path = '/cognitive_comp/hejunqing/projects/pretrained_models/stella-large-zh-v3-1792d'
-# model = SentenceTransformer(model_path)
-# embedding_path = '/cognitive_comp/zhuliang/data/Mem-bench/stella.json'
-# emb_list = []
-# for s in summary:
-#     emb_list.append(model.encode(str(s), normalize_embeddings=True).tolist())
-# with open(embedding_path, 'a+', encoding='utf-8') as file:
-#     json.dump({
-#         "summary": emb_list,
-#         "ids": id_list
-#     }, file, ensure_ascii=False)
-#     file.write('\n')
-# print('Done.')
-#
-# # Bge zh
-# model_path = '/cognitive_comp/hejunqing/projects/pretrained_models/bge-large-zh-v1.5'
-# model = SentenceTransformer(model_path)
-# embedding_path = '/cognitive_comp/zhuliang/data/Mem-bench/bge.json'
-# emb_list = []
-# for s in summary:
-#     emb_list.append(model.encode(str(s), normalize_embeddings=True).tolist())
-# with open(embedding_path, 'a+', encoding='utf-8') as file:
-#     json.dump({
-#         "summary": emb_list,
-#         "ids": id_list
-#     }, file, ensure_ascii=False)
-#     file.write('\n')
-# print('Done.')
-#
-# # BGE M3  zh / en
-# model_path = '/cognitive_comp/hejunqing/projects/pretrained_models/bge-m3'
-# model = BGEM3FlagModel(model_path, use_fp16=True)
-# embedding_path = '/cognitive_comp/zhuliang/data/Mem-bench/en/bge_m3.json'
-# emb_list = []
-# for s in tqdm(summary, total=160, ncols=66):
-#     emb_list.append(model.encode(str(s))['dense_vecs'].tolist())
-# with open(embedding_path, 'a+', encoding='utf-8') as file:
-#     json.dump({
-#         "summary": emb_list,
-#         "ids": id_list
-#     }, file, ensure_ascii=False)
-#     file.write('\n')
-# print('Done.')
-
-# # Dmeta zh
-# model_path = '/cognitive_comp/hejunqing/projects/pretrained_models/Dmeta-embedding-zh'
-# model = SentenceTransformer(model_path)
-# embedding_path = '/cognitive_comp/zhuliang/data/Mem-bench/dmeta.json'
-# emb_list = []
-# for s in summary:
-#     emb_list.append(model.encode(str(s), normalize_embeddings=True).tolist())
-# with open(embedding_path, 'a+', encoding='utf-8') as file:
-#     json.dump({
-#         "summary": emb_list,
-#         "ids": id_list
-#     }, file, ensure_ascii=False)
-#     file.write('\n')
-# print('Done.')
-
+        
 
 # # Jina en
-# model_path = '/cognitive_comp/hejunqing/projects/pretrained_models/jina-embeddings-v2-base-en'
+# model_path = 'pretrained_models/jina-embeddings-v2-base-en'
 # model = AutoModel.from_pretrained(model_path, trust_remote_code=True)
-# embedding_path = '/cognitive_comp/zhuliang/data/Mem-bench/en/jina.json'
+# embedding_path = 'Mem-bench/en/jina.json'
 # emb_list = []
 # for s in summary:
 #     emb_list.append(model.encode(str(s), normalize_embeddings=True).tolist())
@@ -247,9 +153,9 @@ if __name__=='__main__':
 # print('Done.')
 
 # # gte en
-# model_path = '/cognitive_comp/hejunqing/projects/pretrained_models/gte-large-en-v1.5/gte-large-en-v1.5'
+# model_path = 'pretrained_models/gte-large-en-v1.5/gte-large-en-v1.5'
 # model = SentenceTransformer(model_path, trust_remote_code=True)
-# embedding_path = '/cognitive_comp/zhuliang/data/Mem-bench/en/gte.json'
+# embedding_path = 'Mem-bench/en/gte.json'
 # emb_list = []
 # for s in summary:
 #     emb_list.append(model.encode(str(s)).tolist())
@@ -263,8 +169,9 @@ if __name__=='__main__':
 
 # # OpenAI en (zh)
 # import openai
+# openai.api_key = "xxx"
 # model = 'text-embedding-3-large'
-# embedding_path = '/cognitive_comp/zhuliang/data/Mem-bench/openai.json'
+# embedding_path = 'Mem-bench/openai.json'
 # emb_list = []
 # for s in summary:
 #     emb_list.append(openai.Embedding.create(model=model, input=str(s))['data'][0]['embedding'])
@@ -279,23 +186,24 @@ if __name__=='__main__':
 
 
 # 计算 top 20     OpenAI 另取 top -10
-# model_path = '/cognitive_comp/hejunqing/projects/pretrained_models/jina-embeddings-v2-base-en' # jina
+# model_path = 'pretrained_models/jina-embeddings-v2-base-en' # jina
 # model = AutoModel.from_pretrained(model_path, trust_remote_code=True)
-# embedding_path = '/cognitive_comp/zhuliang/data/Mem-bench/en/jina.json'
+# embedding_path = 'Mem-bench/en/jina.json'
 #
-# model_path = '/cognitive_comp/hejunqing/projects/pretrained_models/gte-large-en-v1.5/gte-large-en-v1.5'
+# model_path = 'pretrained_models/gte-large-en-v1.5/gte-large-en-v1.5'
 # model = SentenceTransformer(model_path, trust_remote_code=True)
-# embedding_path = '/cognitive_comp/zhuliang/data/Mem-bench/en/gte.json'
+# embedding_path = 'Mem-bench/en/gte.json'
 #
-# model_path = '/cognitive_comp/hejunqing/projects/pretrained_models/bge-m3'
+# model_path = 'pretrained_models/bge-m3'
 # model = BGEM3FlagModel(model_path, use_fp16=True)
-# embedding_path = '/cognitive_comp/zhuliang/data/Mem-bench/en/bge_m3.json'
+# embedding_path = 'Mem-bench/en/bge_m3.json'
 
 
 # OpanAI en
 # import openai
+# openai.api_key = "xxx"
 # model = 'text-embedding-3-large'
-# embedding_path = '/cognitive_comp/zhuliang/data/Mem-bench/en/openai.json'
+# embedding_path = 'Mem-bench/en/openai.json'
 #
 # with open(embedding_path, 'r', encoding='utf-8') as file:
 #     for line in file:
@@ -345,7 +253,7 @@ if __name__=='__main__':
 #         sample['top-20-ids'] = top_k_ids
 #         sample['bottom-10-ids'] = bottom_k_ids
 #
-#         with open('/cognitive_comp/zhuliang/data/Mem-bench/en/openai_top_20_bottom.json', 'a+', encoding='utf-8') as file:
+#         with open('Mem-bench/en/openai_top_20_bottom.json', 'a+', encoding='utf-8') as file:
 #             json.dump(sample, file, ensure_ascii=False)
 #             file.write('\n')
 # print('Done.')
@@ -365,7 +273,7 @@ if __name__=='__main__':
 # bart_emb, bart_ids = sum_emb[:76], sum_ids[:76]
 # lisa_emb, lisa_ids = sum_emb[76:], sum_ids[76:]
 # bart_emb, lisa_emb, bart_ids, lisa_ids = np.array(bart_emb), np.array(lisa_emb), np.array(bart_ids), np.array(lisa_ids)
-# dialogue_path = 'data/Membench-zh-dialogue-fix5.json'
+# dialogue_path = 'data/Membench-zh-dialogue.json'
 # count = 0
 # with open(dialogue_path, 'r', encoding='utf-8') as file:
 #     for line in file:
@@ -405,7 +313,7 @@ if __name__=='__main__':
 #         sample['top-20-ids'] = top_k_ids
 #         sample['bottom-10-ids'] = bottom_k_ids
 
-#         with open('/cognitive_comp/zhuliang/data/Mem-bench/openai_top_20_bottom.json', 'a+', encoding='utf-8') as file:
+#         with open('Mem-bench/openai_top_20_bottom.json', 'a+', encoding='utf-8') as file:
 #             json.dump(sample, file, ensure_ascii=False)
 #             file.write('\n')
 # print('Done.')

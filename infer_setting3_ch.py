@@ -5,29 +5,9 @@ import torch
 from transformers.generation.utils import GenerationConfig
 
 device = "cuda" # the device to load the model onto
-# model_list = ['/cognitive_comp/zhuliang/zoo/01ai/Yi-1.5-9B-Chat/']
-# model_list = ['/cognitive_comp/zhuliang/zoo/ZhipuAI/glm-4-9b-chat/']
-# model_list = ['/cognitive_comp/zhuliang/zoo/qwen/Qwen2-72B-Instruct/']
-# model_list = ['/cognitive_comp/zhuliang/zoo/Qwen2-7B-Instruct/']
-# model_list = ['/cognitive_comp/zhuliang/zoo/Shanghai_AI_Laboratory/internlm2-chat-7b/']
-# model_list = ['/cognitive_comp/zhuliang/zoo/Shanghai_AI_Laboratory/internlm2-chat-20b/']
-# model_list = ['/cognitive_comp/zhuliang/zoo/deepseek-ai/deepseek-llm-7b-chat/']
-# model_list = ['/cognitive_comp/hejunqing/projects/pretrained_models/Yi-1.5-34B-Chat-16K']
-# model_list = ['/cognitive_comp/zhuliang/zoo/deepseek-ai/deepseek-llm-67b-chat/']
 model_list = [
-#               '/cognitive_comp/hejunqing/projects/pretrained_models/Yi-1.5-34B-Chat-16K',
-#               '/cognitive_comp/zhuliang/zoo/deepseek-ai/deepseek-llm-7b-chat/',
-#               '/cognitive_comp/zhuliang/zoo/Shanghai_AI_Laboratory/internlm2-chat-20b/',
-#               '/cognitive_comp/zhuliang/zoo/Shanghai_AI_Laboratory/internlm2-chat-7b/',
-#               '/cognitive_comp/zhuliang/zoo/Qwen2-7B-Instruct/',
-              '/cognitive_comp/zhuliang/zoo/qwen/Qwen2-72B-Instruct/',
-              '/cognitive_comp/zhuliang/zoo/deepseek-ai/deepseek-llm-67b-chat/',]
-#               '/cognitive_comp/zhuliang/zoo/ZhipuAI/glm-4-9b-chat/',
-#               '/cognitive_comp/zhuliang/zoo/01ai/Yi-1.5-9B-Chat/
-
-# model_list = ['/cognitive_comp/hejunqing/projects/pretrained_models/Baichuan2-13B-Chatv2/Baichuan2-13B-Chat',
-#               '/cognitive_comp/zhangwenjun/pretrained/Qwen1.5-14B-Chat',
-# model_list = ['/cognitive_comp/hejunqing/projects/pretrained_models/Qwen1.5-32B-Chat']
+              'pretrained_models/Qwen2-72B-Instruct/',
+              'pretrained_models/deepseek-llm-67b-chat/']
 
 dialogue_path='data/ch/MADial-Bench-zh-dialogue-setting3.json'
 summary_path='data/ch/MADial-Bench-zh-memory.json'
@@ -47,7 +27,6 @@ print('Summary loaded.')
 
 for name in model_list:
     if 'Qwen2-72B' in name:
-        # infer_res_path = '/cognitive_comp/zhuliang/data/inference/t3/Qwen2-7B-Instruct_no_guideline.json'
         infer_res_path='output/ch/setting3/Qwen-72B-Instruct_setting3.json'
     elif 'deepseek-llm-67b' in name:
         infer_res_path='output/ch/setting3/deepseek-llm-67b_setting3.json'

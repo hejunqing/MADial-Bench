@@ -55,10 +55,10 @@ def precision_at_k(actual, predicted, k):
 #
 # for model in res_path_list:
 #     res_1_3_5_10 = [[], [], [], []]
-#     # res_path = '/cognitive_comp/zhuliang/data/Mem-bench/en/' + model + '_top_20.json'
-#     # res_path = '/cognitive_comp/zhuliang/data/Mem-bench/en/openai_top_20_bottom.json'
-#     res_path = '/cognitive_comp/zhuliang/data/Mem-bench/openai_top_20_bottom.json'
-#     # res_path = '/cognitive_comp/zhuliang/data/Mem-bench/en/openai_top_20.json'
+#     # res_path = 'Mem-bench/en/' + model + '_top_20.json'
+#     # res_path = 'Mem-bench/en/openai_top_20_bottom.json'
+#     res_path = 'Mem-bench/openai_top_20_bottom.json'
+#     # res_path = 'Mem-bench/en/openai_top_20.json'
 #     count = 0
 #     with open(res_path, 'r', encoding='utf-8') as file:
 #         for line in file:
@@ -98,9 +98,9 @@ for model in res_path_list:
     recall_res_1_3_5_10 = [[], [], [], []]
     precision_res_1_3_5_10 = [[], [], [], []]
     res_path = 'embeddings/' + model + '_zh_top_20_ids.json'
-    # res_path = '/cognitive_comp/zhuliang/data/Mem-bench/en/openai_top_20_bottom.json'
-    # res_path = ('/cognitive_comp/zhuliang/data/Mem-bench/en/openai_top_20_bottom.json')
-    # res_path = '/cognitive_comp/zhuliang/data/Mem-bench/en/openai_top_20.json'
+    # res_path = 'Mem-bench/en/openai_top_20_bottom.json'
+    # res_path = 'Mem-bench/en/openai_top_20_bottom.json'
+    # res_path = 'Mem-bench/en/openai_top_20.json'
     count = 0
     with open(res_path, 'r', encoding='utf-8') as file:
         for line in file:

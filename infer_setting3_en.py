@@ -24,24 +24,16 @@ def get_completion(prompt, model):
     )
     return response.choices[0].message["content"]
 
-openai.api_key = "sk-proj-CsM3ltN9MnXZrDsdKANJT3BlbkFJW3x3aPqaG4yopp7Toqy5"
+openai.api_key = "xxx"
 
 device = "cuda" # the device to load the model onto
 
-# model_list = ['chatgpt',
-#               'gpt-4o']
-
-# model_list = ['/cognitive_comp/zhuliang/zoo/Meta-Llama-3-8B-Instruct/',
-#               '/cognitive_comp/zhuliang/zoo/LLM-Research/Meta-Llama-3-70B-Instruct/',]
-#
-# model_list = ['/cognitive_comp/zhuliang/zoo/Mistral-7B-Instruct-v0.3/',
-#               '/cognitive_comp/zhuliang/zoo/zephyr-7b-beta/']
 
 model_list = ['']
 
-dialogue_path = '/cognitive_comp/zhuliang/data/Mem-bench/en/Mem-bench-en-dialogue.json'
-summary_path = '/cognitive_comp/zhuliang/data/Mem-bench/en/Mem-bench-en-summary.json'
-res_path = '/cognitive_comp/zhuliang/data/inference/t4/en/'
+dialogue_path = 'data/en/MADial-Bench-en-dialogue.json'
+summary_path = 'data/en/MADial-Bench-en-summary.json'
+res_path = 'output/setting3/en/'
 # 读取 summary
 summary = {}
 count = 0

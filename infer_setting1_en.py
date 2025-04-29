@@ -28,19 +28,8 @@ openai.api_key = "xxx"
 
 device = "cuda" # the device to load the model onto
 
-# model_list = ['chatgpt',
-#               'gpt-4o']
 
-# model_list = ['/cognitive_comp/zhuliang/zoo/Meta-Llama-3-8B-Instruct/',
-            #   '/cognitive_comp/zhuliang/zoo/LLM-Research/Meta-Llama-3-70B-Instruct/',]
-#
-# model_list = ['/cognitive_comp/zhuliang/zoo/Mistral-7B-Instruct-v0.3/',
-#               '/cognitive_comp/zhuliang/zoo/zephyr-7b-beta/']
-
-model_list = [            '/cognitive_comp/hejunqing/projects/pretrained_models/Meta-Llama-3.1-8B-Instruct'
-]
-# model_list = ['/cognitive_comp/pankunhao/pretrained/Llama-2-13b-chat-hf',
-# model_list = ['/cognitive_comp/zhuliang/zoo/AI-ModelScope/Smaug-34B-v0___1/']
+model_list = ['pretrained_models/Meta-Llama-3.1-8B-Instruct']
 
 dialogue_path = 'data/en/MADial-Bench-en-dialogue.json'
 summary_path = 'data/en/MADial-Bench-en-memory.json'

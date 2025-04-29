@@ -4,7 +4,7 @@ from tqdm import tqdm
 from openai import OpenAI
 
 model = "gpt-4-turbo-2024-04-09"
-client = OpenAI('set your key')
+client = OpenAI() # set your key here
 
 def get_completion(prompt, model=model):
     messages = [{"role": "user", "content": prompt}]
@@ -19,9 +19,9 @@ def get_completion(prompt, model=model):
 language = 'zh'
 
 if language == 'en':
-    dialogue_path = '/cognitive_comp/zhuliang/data/Mem-bench/en/Mem-bench-en-dialogue.json'
-    summary_path = '/cognitive_comp/zhuliang/data/Mem-bench/en/Mem-bench-en-summary.json'
-    infer_res_path = '/cognitive_comp/zhuliang/data/inference/t4/en/gpt4_no_guideline.json'
+    dialogue_path = 'data/en/MADial-Bench-en-dialogue.json'
+    summary_path = 'data/en/MADial-Bench-en-summary.json'
+    infer_res_path = 'output/en/setting3/gpt4_no_guideline.json'
 
     # 读取 summary
     summary = {}

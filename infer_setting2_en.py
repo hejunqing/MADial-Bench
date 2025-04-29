@@ -7,8 +7,8 @@ from transformers.generation.utils import GenerationConfig
 device = "cuda" # the device to load the model onto
 
 model_list = [
-            '/cognitive_comp/hejunqing/projects/pretrained_models/Meta-Llama-3.1-8B-Instruct'
-            # '/cognitive_comp/zhuliang/zoo/LLM-Research/Meta-Llama-3-70B-Instruct/',
+            'pretrained_models/Meta-Llama-3.1-8B-Instruct'
+            'pretrained_models/Meta-Llama-3-70B-Instruct/',
               ]
 
 dialogue_path = 'data/en/MADial-Bench-en-dialogue-setting2.json'

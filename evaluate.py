@@ -87,34 +87,6 @@ def calculate_rouge_l(reference, hypothesis):
     
     return rouge_l
 
-# infer_res_path=[
-#     '/cognitive_comp/hejunqing/projects/character_agent_data_pipeline/data_process/memory/membench/output/inference/doubao_t3_result_0709_without_guide.json',
-#     '/cognitive_comp/hejunqing/projects/character_agent_data_pipeline/data_process/memory/membench/output/inference/gpt4_t3_0709_without_guideline.json',
-#     '/cognitive_comp/hejunqing/projects/character_agent_data_pipeline/data_process/memory/membench/output/actor_t3_result_0708_without_guide.json',
-#     '/cognitive_comp/hejunqing/projects/character_agent_data_pipeline/data_process/memory/membench/output/inference/Qwen-72B-Instruct_without_guide_0711.json',
-#     '/cognitive_comp/hejunqing/projects/character_agent_data_pipeline/data_process/memory/membench/output/inference/t3_glm4_api_0709_without_guide.json'
-#     ] # t1
-
-#t2
-# infer_res_path=[
-#     '/cognitive_comp/hejunqing/projects/character_agent_data_pipeline/data_process/memory/membench/output/inference/doubao_t2_result_0716_without_guide.json',
-#     '/cognitive_comp/hejunqing/projects/character_agent_data_pipeline/data_process/memory/membench/output/inference/t2-gpt4-turbo-without_guide_0716.json',
-#     '/cognitive_comp/hejunqing/projects/character_agent_data_pipeline/data_process/memory/membench/output/inference/actor_t2_result_0716_without_guide.json',
-#     '/cognitive_comp/hejunqing/projects/character_agent_data_pipeline/data_process/memory/membench/output/inference/t2_Qwen-72B-Instruct_without_guide_0716.json',
-#     '/cognitive_comp/hejunqing/projects/character_agent_data_pipeline/data_process/memory/membench/output/inference/t2_glm4_api_0716_without_guide.json',
-# ]
-
-#t1
-# infer_res_path=[
-#     '/cognitive_comp/hejunqing/projects/character_agent_data_pipeline/data_process/memory/membench/output/inference/doubao_t1_result_0717.json',
-#     '/cognitive_comp/hejunqing/projects/character_agent_data_pipeline/data_process/memory/membench/output/inference/t1-gpt4-turbo-without_guide_0718.json',
-#     '/cognitive_comp/hejunqing/projects/character_agent_data_pipeline/data_process/memory/membench/output/inference/actor0606_t1_result_0718_without_guide.json',
-#     '/cognitive_comp/hejunqing/projects/character_agent_data_pipeline/data_process/memory/membench/output/inference/t1_Qwen-72B-Instruct_without_guide_0716.json',
-#     '/cognitive_comp/hejunqing/projects/character_agent_data_pipeline/data_process/memory/membench/output/inference/t1_glm4_api_0717_without_guide.json'
-# ]
-
-#en:
-# t1
 
 lang='en'
 infer_res_path=[
