@@ -3,7 +3,6 @@ import json
 from tqdm import tqdm
 from openai import OpenAI
 
-# openai.api_key = "sk-proj-RMBB0HYrEYHp0XHxIPcBT3BlbkFJHetoNwH9JOHzAnHMRf6c"
 model = "gpt-4-turbo-2024-04-09"
 client = OpenAI(api_key='sk-proj-OaAH3F4imVa6O9wgEoiMT3BlbkFJ5TWIALPqAxKCPZFg3ROD')
 
