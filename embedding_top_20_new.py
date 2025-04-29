@@ -263,7 +263,6 @@ if __name__=='__main__':
 
 # # OpenAI en (zh)
 # import openai
-# openai.api_key = "xxx"
 # model = 'text-embedding-3-large'
 # embedding_path = '/cognitive_comp/zhuliang/data/Mem-bench/openai.json'
 # emb_list = []
@@ -295,7 +294,6 @@ if __name__=='__main__':
 
 # OpanAI en
 # import openai
-# openai.api_key = "xxx"
 # model = 'text-embedding-3-large'
 # embedding_path = '/cognitive_comp/zhuliang/data/Mem-bench/en/openai.json'
 #

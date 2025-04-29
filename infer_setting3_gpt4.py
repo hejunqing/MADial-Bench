@@ -4,7 +4,7 @@ from tqdm import tqdm
 from openai import OpenAI
 
 model = "gpt-4-turbo-2024-04-09"
-client = OpenAI(api_key='your key')
+client = OpenAI('set your key')
 
 def get_completion(prompt, model=model):
     messages = [{"role": "user", "content": prompt}]
