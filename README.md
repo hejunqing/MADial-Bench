@@ -8,9 +8,9 @@ Here we introduce a benchmark for memory-augmented chatbot by proposing two-stag
 
 
 The dialogue and memory data for testing are in **data** directory.
-For English version, the related memories for each testing dialogue are denoted as "relevant-id" in MADial-Bench/data/en/MADial-Bench-en-dialogue.json, with testing turns are written in "test-turn". 
-For Chinese version, relavant memories are marked as "relevant-id" in MADial-Bench/data/zh/MADial-Bench-zh-dialogue.json. 
-"relevant-id" are index of related memories in memory archieve, which are MADial-Bench/data/en/MADial-Bench-en-memory.json and MADial-Bench/data/en/MADial-Bench-en-memory.json.
+
+- "relevant-id" in data/en/MADial-Bench-en-memory.json and data/en/MADial-Bench-en-memory.json，are index of related memories in memory archieve.
+- "test-turn" in data/en/MADial-Bench-en-dialogue.json, and data/zh/MADial-Bench-zh-dialogue.json，the turns to be predicted. 
 
 The embeddings of dialogues and memories in memory recall task are in **embeddings** directory.
 
@@ -22,14 +22,14 @@ You can already make use of the benchmark if you read the paper and have strong 
 
 ## Usage & start up
 
-For memory recall task:
+### For memory recall task:
 
 1. First download embeddings models and save them in **pretrained_models**.
 2. Then run ```Embeddings.py``` to generate embeddings for dialogues and memories. 
 3. Run ```embeddings_top_20_new.py``` to get top 20 candidates.
 4. Run ```embedding_scores_new.py``` to calculate scores of certain metrics.
 
-For memory recognition and response generation task:
+### For memory recognition and response generation task:
 
 0. for English version, run ```make_setting_candidates.py``` to generate dialogues for setting2 and 3.
 1. First download opensourced LLM and save them in **pretrained_models**. If you usage API, then skip.
@@ -44,7 +44,7 @@ Generate a file from the inference results of different LLMs:
 
 
 
-The codes are in a mess temporary, which needs to rewrite if you need one-click start codes. I am undergoing a family accident and will go back to work soon. Sorry for the inconvenience and I will tidy them up ASAP.
+The codes need to be rewritten if you need one-click start codes. Sorry for the inconvenience and I will tidy them up ASAP.
 
 Please feel free to ask any questions and report issues.
 
