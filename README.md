@@ -4,6 +4,7 @@ Repo for the paper, MADial-Bench: Towards Real-world Evaluation of Memory-Augmen
 
 Here we introduce a benchmark for memory-augmented chatbot by proposing two-stage memory recall and multi-recall paradigm based on cognitive science and psychological theory. 
 
+<img width="479" alt="two-stage memory-augmented chatbot" src="https://github.com/user-attachments/assets/ff6b8fc0-5986-4cd4-8546-a9ef169facd4" />
 
 
 The dialogue and memory data for testing are in **data** directory.
@@ -34,7 +35,12 @@ For memory recognition and response generation task:
 1. First download opensourced LLM and save them in **pretrained_models**. If you usage API, then skip.
 2. change the code in ```infer_setting1/2/3_en/ch.py``` to load your LLM, then run the infer program.
 3. copy the output file path and change the path in ```evaluate.py``` to run automatic evaluation. It is not reliable, we recommand you to run step 4.
-4. Human evaluation. Criteria and guidelines are in **annotation** directory. If you want to try LLM as judge, please try. We find the LLMs (up to 2024.10.25) are unable to do such a careful job. 
+4. Human evaluation. Criteria and guidelines are in **annotation** directory. If you want to try LLM as judge, please try. We find the LLMs (up to 2024.10.25) are unable to do such a careful job.
+
+Generate a file from the inference results of different LLMs:
+
+1. run ```make_annotation_candidates.py``` to group the dialogus and the responses togather.
+2. run ```prepare_anno.py``` to sample certain amount of dialogues from the test set and form an excel.
 
 
 
@@ -45,6 +51,28 @@ Please feel free to ask any questions and report issues.
 
 ## Please Cite
 ```
+@inproceedings{he-etal-2025-madial,
+    title = "{MAD}ial-Bench: Towards Real-world Evaluation of Memory-Augmented Dialogue Generation",
+    author = "He, Junqing  and
+      Zhu, Liang  and
+      Wang, Rui  and
+      Wang, Xi  and
+      Haffari, Gholamreza  and
+      Zhang, Jiaxing",
+    editor = "Chiruzzo, Luis  and
+      Ritter, Alan  and
+      Wang, Lu",
+    booktitle = "Proceedings of the 2025 Conference of the Nations of the Americas Chapter of the Association for Computational Linguistics: Human Language Technologies (Volume 1: Long Papers)",
+    month = apr,
+    year = "2025",
+    address = "Albuquerque, New Mexico",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2025.naacl-long.499/",
+    pages = "9902--9921",
+    ISBN = "979-8-89176-189-6"
+}
+
+
 @misc{he2024madialbenchrealworldevaluationmemoryaugmented,
       title={MADial-Bench: Towards Real-world Evaluation of Memory-Augmented Dialogue Generation}, 
       author={Junqing He and Liang Zhu and Rui Wang and Xi Wang and Reza Haffari and Jiaxing Zhang},
